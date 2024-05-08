@@ -1,0 +1,44 @@
+.underline-input {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.underline-input input {
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+  font-size: 16px;
+  padding: 5px 0;
+  width: 100%;
+  background-color: transparent;
+  transition: border-bottom-color 0.3s;
+  color: #333;
+}
+
+.underline-input input:focus {
+  border-bottom-color: #007bff;
+}
+
+.underline-input label {
+  position: absolute;
+  left: 0;
+  bottom: 7px;
+  font-size: 16px;
+  color: #999;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.underline-input input:focus ~ label,
+.underline-input input:valid ~ label {
+  font-size: 12px;
+  transform: translateY(-20px);
+  color: #007bff;
+}
+
+/* Optional: If you want to move label up if there is some text */
+.underline-input input:not(:placeholder-shown) ~ label {
+  font-size: 12px;
+  transform: translateY(-20px);
+  color: #007bff;
+}
